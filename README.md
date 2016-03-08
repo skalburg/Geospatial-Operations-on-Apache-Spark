@@ -1,6 +1,16 @@
 # Geospatial-Operations-on-Apache-Spark
 Demonstration of big data geospatial operations on Apache Spark
 
+Geospatial operations involve humongous amount of data processing. Traditional stand alone systems often do not hold relevance on this matter because of various reasons like scale up cost, single point of failure, maintenance cost and so on. In this project, the following operations were implemented on Apache Spark configured on multiple nodes:
+
+1) Geometry union
+2) Geometry convex hull
+3) Geometry farthest pair
+4) Geometry closest pair
+5) Spatial range query
+6) Spatial join query
+7) Spatial aggregation (Heat Map)
+
 Project group members:
 
 1) Rakesh Subramanian Suresh 
@@ -9,6 +19,8 @@ Project group members:
 4) Kranthi Sai Davuluri
 5) Sagar Kalburgi
 
+Requirements:
+Ubuntu 14.0, Apache Spark, Hadoop, Java
 
 To run the file we need .jar:
 for Creating jar. Import the project using eclipse and create jar as follows
@@ -27,7 +39,7 @@ hadoop dfs -copyFromLocal /<File path> /content
 
 
 
- Modification to be done in code
+Getting started
 -----------------------------------
 
 1) In the code, on the line declaring JavaSparkContext, change the argument of setMaster function from local to spark://<Master IP address>:7077
